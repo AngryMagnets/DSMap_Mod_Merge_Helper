@@ -6,23 +6,16 @@ import org.junit.*;
 
 public class App 
 {
+    static File_Organizer fo;
     public static void main(String[] args) throws Exception 
     {
-        File_Organizer fo = new File_Organizer
-        ( "D:\\Documents\\Scripts\\Java Projects\\DSMap_Mod_Merge_Helper\\BaseModPath"
-        , "D:\\Documents\\Scripts\\Java Projects\\DSMap_Mod_Merge_Helper\\MergeModPath"
-        , "D:\\Documents\\Scripts\\Java Projects\\DSMap_Mod_Merge_Helper\\BaseModSharedOutput"
-        , "D:\\Documents\\Scripts\\Java Projects\\DSMap_Mod_Merge_Helper\\MergeModSharedOutput"
-        , "D:\\Documents\\Scripts\\Java Projects\\DSMap_Mod_Merge_Helper\\UniqueOutput");
-
-        fo.organizeModFiles();
+        testInit();
+        // fo.organizeModFiles();
 
         // Epic
     }
-
-    File_Organizer fo;
     @Before
-    public void testInit () throws IOException
+    public static void testInit () throws IOException
     {
         fo = new File_Organizer
         ( "D:\\Documents\\Scripts\\Java Projects\\DSMap_Mod_Merge_Helper\\BaseModPath"
@@ -72,7 +65,7 @@ public class App
     }
 
     @Test 
-    public void testFileOrganization () throws Exception
+    public static void testFileOrganization () throws Exception
     {
         fo.organizeModFiles();
     }
