@@ -10,7 +10,7 @@ public class App
     public static void main(String[] args) throws Exception 
     {
         testInit();
-        // fo.organizeModFiles();
+        fo.organizeModFiles();
 
         // Epic
     }
